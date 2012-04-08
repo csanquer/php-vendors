@@ -3,7 +3,7 @@ php vendors - Simple script to manage vendors from git or svn
 
 php vendors is a simple dependencies manager based on original Symfony 2.0 Standard Edition vendors script.
 
-This script should be used to manage dependencies from git or subversion repositories for PHP project with PHP <= 5.2.
+This script should be used to manage dependencies from git or subversion repositories for PHP projects with PHP <= 5.2.
 
 For PHP >= 5.3 projects, consider using a better solution like [Composer](http://getcomposer.org/).
 
@@ -22,11 +22,11 @@ Installation / Usage
         [<dependency name>]
             <git|svn>=<url>      ; type of repository and url
             version=             ; version to use
-            vendor=              ; dependency specific vendor dir , overwrite default
-            target=              ; dependency specific target dir , overwrite default
-            externals=           ; dependency specific externals config , overwrite default
+            vendor=              ; dependency specific vendor dir , overwrite default vendor dir
+            target=              ; dependency specific target dir , overwrite default target dir
+            externals=           ; dependency specific externals config , overwrite default externals config
 
-  dependencies are saved into <vendor>/<name> or <vendor>/<target> if <target> is not empty
+  dependencies are saved into `<vendor>/<name>` or `<vendor>/<target>` if `<target>` is not empty
 
   example with a Symfony 1.4 project :
 
@@ -71,8 +71,8 @@ PHP >= 5.0
 Authors
 -------
 
-Fabien Potencier <fabien@symfony.com> for original Symfony 2.0 vendors script 
-2012 Charles Sanquer <charles.sanquer@spyrit.net>
+Fabien Potencier <fabien@symfony.com> for original Symfony 2.0 vendors script <br />
+Charles Sanquer <charles.sanquer@spyrit.net> <br />
 
 License
 -------
