@@ -94,7 +94,7 @@ class SvnDriver extends VcsDriver
     {
         if (!is_dir($this->dir)) 
         {
-            if (!system(sprintf('svn checkout'.$this->getExternalOpt().' %s %s', escapeshellarg($this->url), escapeshellarg($this->dir))))
+            if (!system(sprintf('svn checkout'.$this->getExternalOpt().' -r %s %s %s', escapeshellarg($this->rev), escapeshellarg($this->url), escapeshellarg($this->dir))))
             {
                 return false;
             }
