@@ -94,7 +94,20 @@ class SvnDriver extends VcsDriver
     {
         if (!is_dir($this->dir)) 
         {
-            if (!system(sprintf('svn checkout'.$this->getExternalOpt().' -r %s %s %s', escapeshellarg($this->rev), escapeshellarg($this->url), escapeshellarg($this->dir))))
+            if ($this->rev == 'HEAD')
+            {
+                $cmd = 'svn checkout'.$this->getExternalOpt().' -r '.$this->rev.' %s %s';
+            }
+            elseif(is_numeric($this->rev))
+            {
+                $cmd = 'svn checkout'.$this->getExternalOpt().' %s@'.((int) $this->rev).' %s';
+            }
+            else
+            {
+                $cmd = 'svn checkout'.$this->getExternalOpt().' %s %s';
+            }
+            
+            if (!system(sprintf($cmd, rtrim(escapeshellarg($this->url),"/"), escapeshellarg($this->dir))))
             {
                 return false;
             }
