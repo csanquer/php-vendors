@@ -1,12 +1,11 @@
 php vendors - Simple script to manage vendors from git or svn
 =============================================================
 
+[![Project Status](http://stillmaintained.com/csanquer/php-vendors.png)](http://stillmaintained.com/csanquer/php-vendors)  For PHP >= 5.3 projects, you should use [Composer](http://getcomposer.org/) now.
+
 php vendors is a simple dependencies manager based on original Symfony 2.0 Standard Edition vendors script.
 
 This script should be used to manage dependencies from git or subversion repositories for PHP projects with PHP <= 5.2.
-
-For PHP >= 5.3 projects, consider using a better solution like [Composer](http://getcomposer.org/).
-
 
 Installation / Usage
 --------------------
